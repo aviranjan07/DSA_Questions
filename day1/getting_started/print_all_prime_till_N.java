@@ -1,3 +1,4 @@
+package getting_started;
 import java.util.*;
 
 public class print_all_prime_till_N {

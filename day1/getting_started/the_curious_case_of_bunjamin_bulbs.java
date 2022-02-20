@@ -1,3 +1,4 @@
+package getting_started;
 import java.util.*;
 
 public class the_curious_case_of_bunjamin_bulbs {

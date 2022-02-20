@@ -1,3 +1,5 @@
+package getting_started;
+
 import java.util.*;
 
 public class count_digits_in_a_number {

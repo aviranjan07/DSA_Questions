@@ -1,3 +1,4 @@
+package getting_started;
 import java.util.*;
 
 public class digits_of_a_number {

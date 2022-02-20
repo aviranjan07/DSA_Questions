@@ -1,3 +1,4 @@
+package getting_started;
 // import java.util.*;
 
 // method 1 

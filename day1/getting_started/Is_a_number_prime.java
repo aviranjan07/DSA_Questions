@@ -1,3 +1,4 @@
+package getting_started;
 import java.util.*;
 
 public class Is_a_number_prime {

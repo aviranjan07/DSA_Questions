@@ -1,3 +1,4 @@
+package getting_started;
 import java.util.*;
 
 public class GCD_and_LCM {
