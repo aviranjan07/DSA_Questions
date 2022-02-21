@@ -5,7 +5,7 @@ public class find_element_of_an_array {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 
-        int arr[] = new int[n];
+        int[] arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scn.nextInt();
             System.out.println(i);
