@@ -1,3 +1,4 @@
+package recursion_in_arrays;
 import java.util.*;
 
 public class max_of_an_array {

@@ -1,9 +1,9 @@
+package introduction_to_recursion;
 import java.util.*;
 
-public class power_logarithmic {
+public class power_linear {
 
     public static void main(String[] args) throws Exception {
-        // write your code here
         Scanner scn = new Scanner(System.in);
         int x = scn.nextInt();
         int n = scn.nextInt();
@@ -12,20 +12,17 @@ public class power_logarithmic {
     }
 
     public static int power(int x, int n){
-        if (n == 0) {
+        if(n == 0) {
             return 1;
         }
-        int xpb2 = power(x, n / 2);
-        int xpn = xpb2 * xpb2;
-        if (n % 2 == 1) {
-            xpn = xpn * x;
-        }
+        int nm1p =  power(x, n -1 );
+        int xpn = nm1p * x;
         return xpn;
     }
 
 }
 /* 
-input -
+input-
 2
 5
 output-
