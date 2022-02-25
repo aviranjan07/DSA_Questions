@@ -1,22 +1,37 @@
+package time_and_space_complexity;
 import java.util.*;
 
-public class partition_an_array {
+public class quick_select {
 
-  public static void partition(int[] arr, int pivot){
+  public static int quickSelect(int[] arr, int lo, int hi, int k) {
     //write your code here
-    int i = 0;
-    int j = 0;
+    int pivot = arr[hi];
+    int pi = partition(arr, pivot, lo, hi);
 
-    while (i < arr.length) {
-      if(arr[i] > pivot) {
-        i++;
-      }else {
+    if (k > pi) {
+        return quickSelect(arr, pi + 1, hi, k);
+    } else if (k < pi) {
+        return quickSelect(arr, lo, pi - 1, k);
+    } else {
+        return pivot;
+    }
+
+  }
+
+  public static int partition(int[] arr, int pivot, int lo, int hi) {
+    System.out.println("pivot -> " + pivot);
+    int i = lo, j = lo;
+    while (i <= hi) {
+      if (arr[i] <= pivot) {
         swap(arr, i, j);
         i++;
         j++;
+      } else {
+        i++;
       }
     }
-    
+    System.out.println("pivot index -> " + (j - 1));
+    return (j - 1);
   }
 
   // used for swapping ith and jth elements of array
@@ -41,24 +56,25 @@ public class partition_an_array {
     for (int i = 0; i < n; i++) {
       arr[i] = scn.nextInt();
     }
-    int pivot = scn.nextInt();
-    partition(arr,pivot);
-    print(arr);
+    int k = scn.nextInt();
+    System.out.println(quickSelect(arr,0,arr.length - 1,k - 1));
   }
 
 }
 /* 
 input-
 5
-7 
+7
 -2
 4
 1
 3
 3
 output-
+pivot -> 3
 Swapping -2 and 7
 Swapping 1 and 7
 Swapping 3 and 4
--2 1 3 7 4
+pivot index -> 2
+3
 */
