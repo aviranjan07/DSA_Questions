@@ -1,4 +1,3 @@
-package binary_search_tree_for_beginners;
 import java.io.*;
 import java.util.*;
 
