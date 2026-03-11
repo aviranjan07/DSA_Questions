@@ -1,6 +1,4 @@
-package getting_started;
-
-import java.util.*;
+import java.util.Scanner;
 
 public class count_digits_in_a_number {
     public static void main (String[] args) {
